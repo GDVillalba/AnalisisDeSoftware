@@ -17,15 +17,9 @@ public class Triangulo {
 	
 	public boolean esTriangulo() 
 	{
-		if( this.lado1 + this.lado2 > this.lado3)
-		{
-			return true;
-		}
-		if( this.lado2 + this.lado3 > this.lado1)
-		{
-			return true;
-		}
-		if( this.lado3 + this.lado1 > this.lado2)
+		if( this.lado1 - this.lado2 - this.lado3 < 0 &&
+			this.lado2 - this.lado1 - this.lado3 < 0 &&
+			this.lado3 - this.lado1 - this.lado2 < 0 )
 		{
 			return true;
 		}
@@ -48,10 +42,8 @@ public class Triangulo {
 		{
 			return "isoceles";
 		}
-		else
-		{
-			return "rectangulo";
-		}
+		
+		return "escaleno";
 
 	}
 	
